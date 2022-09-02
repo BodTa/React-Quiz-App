@@ -52,7 +52,6 @@ export default function App() {
 			return newQuizData;
 		});
 	}
-	console.log(quizData);
 	function question() {
 		return quizData.map(quiz => {
 			return (
