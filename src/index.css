@@ -1,10 +1,29 @@
 body {
-	background: rgb(238, 174, 202);
-	background: radial-gradient(
-		circle,
-		rgba(238, 174, 202, 1) 0%,
-		rgba(148, 187, 233, 1) 100%
-	);
+	background: #ffafbd; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#ffafbd,
+		#ffc3a0
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #ffafbd, #ffc3a0);
+}
+
+@keyframes changeBc {
+	0% {
+		border-color: #a10035;
+	}
+	25% {
+		border-color: #fec260;
+	}
+	50% {
+		border-color: #3fa796;
+	}
+	75% {
+		border-color: #2a0944;
+	}
+	100% {
+		border-color: #f94892;
+	}
 }
 button {
 	cursor: pointer;
@@ -86,8 +105,8 @@ button {
 .answer-btn:hover {
 	color: rgb(0, 0, 0);
 	background-color: rgba(222, 160, 255, 0.351);
-	border-color: rgb(255, 0, 242);
-	transform: scale(1.1);
+	animation: changeBc 5s infinite alternate linear;
+	transform: scale(1.2);
 }
 .question {
 	font-weight: bold;

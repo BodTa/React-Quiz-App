@@ -78,6 +78,7 @@ export default function App() {
 		setCount(correctCount);
 		setIsCompleted(true);
 	}
+	console.log(quizData);
 	return (
 		<div>
 			{count === 5 && isCompleted && <Confetti width={1300} height={800} />}
